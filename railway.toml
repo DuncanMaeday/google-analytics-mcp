@@ -1,8 +1,5 @@
   [build]                                                                                                                                                                                                   
   builder = "nixpacks"
-
-  [deploy]
-  startCommand = "pip install . && python -c \"\nimport os,sys,tempfile\ncreds=os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON')\nif creds:\n    import tempfile\n    
-  t=tempfile.NamedTemporaryFile(mode='w',suffix='.json',delete=False)\n    t.write(creds);t.close()\n    os.environ['GOOGLE_APPLICATION_CREDENTIALS']=t.name\nfrom ga4_mcp.coordinator import mcp\nfrom     
-  ga4_mcp.tools import metadata,reporting\npid=os.getenv('GA4_PROPERTY_ID')\ns=metadata.get_property_schema_uncached(pid)\nmetadata.PROPERTY_SCHEMA=s;reporting.PROPERTY_SCHEMA=s\nmcp.run(transport='stream
-  able-http',host='0.0.0.0',port=int(os.getenv('PORT',8080)))\n\"" 
+                                                                                                                                                                                                            
+  [deploy]        
+  startCommand = "pip install . && python server.py"
