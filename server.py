@@ -1,6 +1,6 @@
 import os                                                                                                                                                                                                 
-  import sys                                                                                                                                                                                                
-  import tempfile                                                                                                                                                                                           
+import sys                                                                                                                                                                                                
+import tempfile                                                                                                                                                                                           
                                                                                                                                                                                                             
   # Write JSON credentials to a temp file so ga4_mcp can find them                                                                                                                                          
   creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")                                                                                                                                             
