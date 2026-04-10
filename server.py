@@ -3,7 +3,7 @@ import sys
 import tempfile                                                                                                                                                                                           
                                                                                                                                                                                                             
   # Write JSON credentials to a temp file so ga4_mcp can find them                                                                                                                                          
-  creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")                                                                                                                                             
+creds_json = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")                                                                                                                                             
   if creds_json:  
       tmp = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False)
       tmp.write(creds_json)                                                                                                                                                                                 
