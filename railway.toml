@@ -1,0 +1,5 @@
+[build]         
+  builder = "nixpacks"
+
+  [deploy]
+  startCommand = "pip install . && npx -y supergateway --stdio 'python -m ga4_mcp' --port $PORT"
