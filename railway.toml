@@ -1,5 +1,5 @@
-[build]                                                                                                                                                                                                   
-  builder = "nixpacks"
-
-  [deploy]
-  startCommand = "pip install . && python -m ga4_mcp --transport streamable-http --port $PORT"
+[build]
+  builder = "nixpacks"                                                                                                                                                                                      
+   
+  [deploy]                                                                                                                                                                                                  
+  startCommand = "pip install . && python server.py"
